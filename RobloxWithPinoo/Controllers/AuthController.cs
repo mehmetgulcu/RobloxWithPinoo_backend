@@ -26,19 +26,19 @@ namespace RobloxWithPinoo.Controllers
 
             if (result.Succeeded)
             {
-                var message = new MimeMessage();
-                message.From.Add(new MailboxAddress("Pinoo Robotics", "mehmetgulcudeveloper@gmail.com"));
-                message.To.Add(new MailboxAddress("User", model.Email));
-                message.Subject = "Pinoo Roblox'a Hoşgeldiniz !";
-                message.Body = new TextPart("plain") { Text = "Pinoo Robotics'e Hoşgeldiniz." };
+                //var message = new MimeMessage();
+                //message.From.Add(new MailboxAddress("Pinoo Robotics", "mehmetgulcudeveloper@gmail.com"));
+                //message.To.Add(new MailboxAddress("User", model.Email));
+                //message.Subject = "Pinoo Roblox'a Hoşgeldiniz !";
+                //message.Body = new TextPart("plain") { Text = "Pinoo Robotics'e Hoşgeldiniz." };
 
-                using (var client = new SmtpClient())
-                {
-                    client.Connect("smtp.gmail.com", 587, SecureSocketOptions.StartTls);
-                    client.Authenticate("mehmetgulcudeveloper@gmail.com", "ldfmzxxthxfzhmtb");
-                    client.Send(message);
-                    client.Disconnect(true);
-                }
+                //using (var client = new SmtpClient())
+                //{
+                //    client.Connect("smtp.gmail.com", 587, SecureSocketOptions.StartTls);
+                //    client.Authenticate("mehmetgulcudeveloper@gmail.com", "ldfmzxxthxfzhmtb");
+                //    client.Send(message);
+                //    client.Disconnect(true);
+                //}
 
                 return Ok("Kullanıcı başarıyla kaydoldu.");
             }
